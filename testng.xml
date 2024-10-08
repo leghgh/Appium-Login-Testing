@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<!-- <groups>
+		<run><exclude name="tasksMod"></exclude>
+		<include name="tasksModok"></include>
+		</run>
+	</groups> -->
+	
+
+	<test thread-count="5" name="Regression Test">
+	<parameter name="utilisateurConnecté" value="Medzeid"></parameter>
+	<parameter name="projectName" value="cypressTraining"></parameter>
+	<parameter name="connectedUser" value="Selim"></parameter>
+	
+		
+		<classes>
+			<class name="com.qacard.SignupScreenTest" />
+			<class name="com.qacard.LoginScreenTest" />
+			<!-- <methods><include name="ValiderTask" /></methods> -->
+		</classes>
+	</test>
+	<test thread-count="6" name="E2E Test">
+		<classes>
+			<class name="com.qacard.LoginScreenTest" />
+			<class name="com.qacard.NewTaskScreenTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
